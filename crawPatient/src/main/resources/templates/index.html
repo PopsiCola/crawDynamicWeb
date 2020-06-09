@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>爬取患者</title>
+</head>
+<body>
+<p th:text="${msg}" style="color: red"></p>
+<!--<a th:href="${downfile}" th:download="${downfile}"><p th:text="${down}" style="color: red"></p></a>-->
+
+<!--<p>上传合并excel</p>-->
+<!--<p>注意：批量上传文件时，需要将文件名添加月份进行区分，例如 1我的excel.xls。代表一月份。</p>-->
+<!-- 测试文件上传和下载 -->
+<form action="crowToExcel"
+      method="post" enctype="multipart/form-data">
+    <p>患者id:<input type="text" name="patient_id" id="patient_id"/></p>
+    <p>患者姓名:<input type="text" name="patientName" id="patientName"/></p>
+    <p>本地jessionId：<input type="text" id="jessionId" name="jessionId" th:value="${jsessionId}"/></p>
+    <p>ip地址（可不填）：<input type="text" id="url" name="url"/></p>
+    <p>生成Excel文件名：<input type="text" id="fileName" name="fileName" style="width: 280px"/></p>
+    <p> <input type="submit" value="爬取"> </p>
+</form>
+
+
+</body>
+</html>

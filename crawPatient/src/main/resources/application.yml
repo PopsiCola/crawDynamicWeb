@@ -1,0 +1,24 @@
+server:
+  port: 8080
+#  servlet:
+#    context-path: /admin_system
+spring:
+  application:
+    name: crawPatient
+
+  #热部署是否启用
+  devtools:
+    restart:
+      enabled: true
+  #  设置静态资源
+  mvc.static-path-pattern: /**
+  resources.static-locations: classpath:/static/
+
+
+  #thymeleaf
+  thymeleaf:
+    cache: false
+    encoding: utf-8
+    mode: HTML5
+    prefix: classpath:/templates/
+    suffix: .html
